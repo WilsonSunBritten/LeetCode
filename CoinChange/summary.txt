@@ -1,0 +1,20 @@
+you are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+
+Example 1:
+coins = [1, 2, 5], amount = 11
+return 3 (11 = 5 + 5 + 1)
+
+Example 2:
+coins = [2], amount = 3
+return -1.
+
+Note:
+You may assume that you have an infinite number of each kind of coin.
+
+
+Initial thoughts:
+I feel like I encountered this once in college, as a problem with a good dynamic solution. Can't help it when you come across problems you know... but I'd prefer getting new ones. I believe the old solution went as follows.
+
+Create an array of size 'amount', initialized to represent they are not filled(0's should work here). Each index is a sub-amount, and the value is the last coin to reach that amount. You dynamically fill up the array by iterating over it, at each position you check the array's value at the current index-(each valid coin value), if the value is valid, then you use that coins value for the current position. To find the optimal coin combination for any amount in the array, you start at that amount, grab the value, and iterate backwards by that amounts value.
+
+I'll write this up, and maybe while it's occuring, I'll think up of something more efficient in the case of a single value.
