@@ -18,3 +18,10 @@ I feel like I encountered this once in college, as a problem with a good dynamic
 Create an array of size 'amount', initialized to represent they are not filled(0's should work here). Each index is a sub-amount, and the value is the last coin to reach that amount. You dynamically fill up the array by iterating over it, at each position you check the array's value at the current index-(each valid coin value), if the value is valid, then you use that coins value for the current position. To find the optimal coin combination for any amount in the array, you start at that amount, grab the value, and iterate backwards by that amounts value.
 
 I'll write this up, and maybe while it's occuring, I'll think up of something more efficient in the case of a single value.
+
+
+Later thoughts:
+Solution worked on the base test case. What I hadn't mentioned above is that you want to find the biggest index to an existing value... I think. I haven't come up with a test case that could invalidate it, yet. Well, just did, [1, 4, 5], 12, fails. The solution is fairly straight forward, We also keep track of the number of coins necesary at each index. Little bit of a bummer, but a necessary change. 
+
+Final Thoughts:
+Implimented solution, was a little tricky and I got a bit lazy. However, it fixed the issue and now should work on whatever set. Could make code a bit cleaner. My array always includes the 0 index... though I suppose a 0 amount is valud. Initializing the starting values can be cut out, since I use them as a special case during the main iteration. Had to be careful of not giving preferential treatment to 0 counts, as they are invalid values, not fantastically efficient markers.
