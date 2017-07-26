@@ -1,0 +1,1 @@
+This repository is for keeping track of LeetCode solutions. Usually 1 file per solution, each with it's own main().
