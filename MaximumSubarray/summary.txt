@@ -1,0 +1,8 @@
+Find the contiguous subarray within an array (containing at least one number) which has the largest sum.
+
+For example, given the array [-2,1,-3,4,-1,2,1,-5,4],
+the contiguous subarray [4,-1,2,1] has the largest sum = 6.
+
+
+Initial thoughts:
+The first solution I see would be to try each starting index and keep track of the ending index that gives you the best sub-array value. It feels like something better could exist though, something O(n). The problem entails finding the value of teh maximum sub-array(int the sample outline)... which seems like you could discover by keeping track of the max-subarray value as you go across the array... but I'd like my solution to also depict what the actual maximum subarray is. Maybe a couple extra trackers could make keeping track of that value easier. I think I'll attempt that... skipping an initial slow-but working solution.
