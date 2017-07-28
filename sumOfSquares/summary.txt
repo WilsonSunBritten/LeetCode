@@ -1,0 +1,14 @@
+Given a non-negative integer c, your task is to decide whether there're two integers a and b such that a2 + b2 = c.
+
+Example 1:
+Input: 5
+Output: True
+Explanation: 1 * 1 + 2 * 2 = 5
+Example 2:
+Input: 3
+Output: False
+
+Initial thoughts: 
+Seems like the simplist solution would be to 1. Calculate the sqrt of the given value. 2. Iterate from 1 to that sqrt value, at each value, calulate the sqare, subtract it from the input, and see if the value you currently have is a square. Coding a sqrt function could be trivial. There may be advanced trigometric equations that can hold to this... but none that I can really think of. What about a two variable newtons method? The issue is that newtons method wouldn't goes forever approaching a solution... but that's not a problem because we just check if we currently have integer values. I'm going to see about newtons method on a paper... can't quite type that up easily. 
+
+I don't think newtons work due to there only being one equation, a little writing made that apparent. I'll code my original solution and see if I come up with anything else.
