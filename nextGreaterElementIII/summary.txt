@@ -1,0 +1,16 @@
+Given a positive 32-bit integer n, you need to find the smallest 32-bit integer which has exactly the same digits existing in the integer n and is greater in value than n. If no such positive 32-bit integer exists, you need to return -1.
+
+Example 1:
+Input: 12
+Output: 21
+
+Example 2:
+Input: 21
+Output: -1
+
+Initial thoughts: 
+Seems clear that the first step is to convert the input into a char array. The only way a solution will not exist is if the array is already in descending order.
+
+After that ... hmm... well I think keeping it as an un-ordered list is better since we want to find the exact next highest value. I wrote down 1342->1423 as an example and it's clear that > 1 switch will be necessary. 
+
+Thinking about my logic, I scanned from right to left for a value I could switch, ie, from left to right, find the first value such that something to the right of it is larger(If that fails, then there's no solution as it's an ordered array). You want to know the smallest value that will be larger... too. Since these are strict digits we can use a size-10(or 9 with more logic) bucket array to keep track of what we've found. Make that switch. Then for everything to the right, we want to set it to ascending order. I'll code this up now.
